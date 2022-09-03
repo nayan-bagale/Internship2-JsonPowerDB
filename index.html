@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Mini project to perform CRUD operation on JsonPowerDB</h1>
+    </div>
+    <div class="flex-container">
+        <div class="form">
+            <h2>Create Student Data</h2>
+            <label for="id">Roll No:</label><br>
+            <input type="number" id="id" name="id" value="" class="form-control" placeholder="Required"><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value="" class="form-control" placeholder="Required"><br>
+            <label for="class">Class:</label><br>
+            <input type="text" id="class" name="class" value="" class="form-control" placeholder="Required"><br>
+            <label for="Marks">Marks:</label><br>
+            <input type="number" id="Marks" name="Marks" value="" class="form-control" placeholder="Required"><br>
+            <button class="btn btn-primary" onclick="saveStudent()">Create</button>
+        </div>
+        <hr style="display:none;">
+        <div class="form">
+            <h2>Update Student Data</h2>
+            <label for="id_update_record">Record No:</label><br>
+            <input type="number" id="id_update_record" name="id_update_record" value="" class="form-control"
+                placeholder="Required"><br>
+            <label for="id_update">Roll No:</label><br>
+            <input type="number" id="id_update" name="id_update" value="" class="form-control"
+                placeholder="Optional"><br>
+            <label for="name_update">Name:</label><br>
+            <input type="text" id="name_update" name="name_update" value="" class="form-control"
+                placeholder="Optional"><br>
+            <label for="class_update">Class:</label><br>
+            <input type="text" id="class_update" name="class_update" value="" class="form-control"
+                placeholder="Optional"><br>
+            <label for="Marks_update">Marks:</label><br>
+            <input type="number" id="Marks_update" name="Marks_update" value="" class="form-control"
+                placeholder="Required"><br>
+            <button class="btn btn-primary" onclick="updatedata()">Update</button>
+        </div>
+        <hr style="display:none;">
+        <div class="item">
+            <div class="form">
+                <h2>Delete Student Data</h2>
+                <label for="id_record">Record No:</label><br>
+                <input type="number" id="id_record" name="id_record" value="" class="form-control" placeholder="Required"><br>
+                <button class="btn btn-primary" onclick="remove()">Delete</button>
+            </div>
+            <hr>
+            <div class="form">
+                <h2>Retrieve Student Data</h2>
+                <label for="id_retrieve">Record No:</label><br>
+                <input type="number" id="id_retrieve" name="id_retrieve" value="" class="form-control"
+                placeholder="Required"><br>
+                <button class="btn btn-primary" onclick="retrieveByKey()">Retrieve</button>
+            </div>
+        </div>
+    </div>
+    <hr style="display:none;">
+    <div class="flex-container">
+        <div class="form">
+            <button class="btn btn-primary" onclick="retrieveall()">Retrieve All</button>
+        </div>
+    </div>
+    <div class="flex-container">
+        <table class="table" id="table" style="display: None;">
+            <tbody id="td-list">
+                <tr>
+                    <th>Record No</th>
+                    <th>Class</th>
+                    <th>Marks</th>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="footer">
+        <h3>Developed by Nayan</h3>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
