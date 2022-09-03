@@ -1,7 +1,11 @@
 let token = "90937407"
 let dbname = 'Class'
 let dbrel = 'Student-Rel'
+
+
 $("#id").focus();
+
+
 function validateAndGetFormData() {
     var studRoll = $("#id").val();
     if (studRoll === "") {
