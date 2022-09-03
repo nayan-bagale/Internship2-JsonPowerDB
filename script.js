@@ -1,4 +1,4 @@
-let token = "90937407|-31949292377440042|90943401"
+let token = "90937407"
 let dbname = 'Class'
 let dbrel = 'Student-Rel'
 $("#id").focus();
